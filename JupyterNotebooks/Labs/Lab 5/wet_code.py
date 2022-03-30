@@ -8,7 +8,7 @@
 from typing import Tuple
 
 
-def saturdays_bank_transactions(transations) -> Tuple[float, float]:
+def saturdays_bank_transactions(transations) -> tuple[float, float]:
     savings = 1096.25
     checking = 1590.80
 
@@ -43,3 +43,21 @@ if __name__ == "__main__":
     transations = [300.00, -50.00, -5.00, -20, 15.72, 2083.93, -1034.00, -420.00, -5.23, -15.93, -72.90]
     new_balance = saturdays_bank_transactions(transations)
     print("Your new checking balance is:", '${:.2f}'.format(round(new_balance[0], 2)), "\nYour new savings balance is: ", '${:.2f}'.format(round(new_balance[1], 2)))
+
+    
+from typing import Tuple
+
+def saturdays_bank_transactions(transactions) -> Tuple[float, float]:
+    savings = 1096.25
+    checking = 1590.80
+
+    checking += (transactions[1,2,6,7,8,9,10], [0,4,5] * .85)
+    savings += (transactions[0,4,5] * .15)
+    return checking, savings
+
+if __name__ == "__main__":
+    transactions = [300.00, -50.00, -5.00, -20, 15.72, 2083.93, -1034.00, -420.00, -5.23, -15.93, -72.90]
+    new_balance = saturdays_bank_transactions(transations)
+    print("Your new checking balance is:", '${:.2f}'.format(round(new_balance[0], 2)), "\nYour new savings balance is: ", '${:.2f}'.format(round(new_balance[1], 2)))
+
+    

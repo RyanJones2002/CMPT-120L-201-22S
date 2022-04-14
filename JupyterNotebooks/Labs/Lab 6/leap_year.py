@@ -14,7 +14,7 @@ def leap_year(year):
     elif year % 4 == 0 and not year % 100 == 0:
         return "is a leap year"
     else:
-        return "not a leap year"
+        return "Is not a leap year"
 
 if __name__ == "__main__":
     years = [2000, 1994, 1912, 3002, 1700, 1400]

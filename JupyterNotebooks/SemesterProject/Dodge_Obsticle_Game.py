@@ -9,6 +9,7 @@
 # object class(ball),
     #move function
     #destroy function
+#  list of objects of balls to keep track, 
 
 
 from turtle import position

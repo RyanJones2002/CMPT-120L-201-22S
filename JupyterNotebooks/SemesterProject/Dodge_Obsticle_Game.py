@@ -1,14 +1,16 @@
 
 
-# Need obsticle speed, obsticle direction and starting point, 
 
+# Need Exit Function
 # Need player class, 
     #move function
     #Is hit function
     #   
 # object class(ball),
+    #random spawn function
     #move function
     #destroy function
+    #move all: takes a list of all balls moves them all
 #  list of objects of balls to keep track, 
 
 
@@ -140,8 +142,15 @@ class Player:
         pygame.draw.rect(game_window,white,self.rect)
         pygame.display.update(self.rect)
         
-       
+    #def is_hit(self):
+
 player = Player()
+
+#class object:
+    #def __init__(self):
+        #self.positionY = random
+        #self.positionX = random
+
 
 # Main Function
 while True:

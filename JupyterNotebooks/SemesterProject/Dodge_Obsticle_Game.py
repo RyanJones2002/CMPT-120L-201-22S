@@ -137,14 +137,34 @@ class Player:
                     self.rect = pygame.Rect(self.positionX,self.positionY,50,50)
                     print("right", self.positionX)    
                     self.render()  
-    
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    change_to = 'LEFT'
+                    del self.rect
+                    self.positionX -= 5
+                    self.rect = pygame.Rect(self.positionX,self.positionY,50,50)
+                    print("left", self.positionX)
+                    self.render() 
+                if event.key == pygame.K_RIGHT:
+                    change_to = 'RIGHT'
+                    del self.rect
+                    self.positionX += 5
+                    self.rect = pygame.Rect(self.positionX,self.positionY,50,50)
+                    print("right", self.positionX)    
+                    self.render()  
+
+
     def render(self):
         pygame.draw.rect(game_window,white,self.rect)
         pygame.display.update(self.rect)
         
-    #def is_hit(self):
 
+    #def is_hit(self):
+        #for event in pygame.event.get()
+            #if 
 player = Player()
+
+
 
 #class object:
     #def __init__(self):
@@ -155,10 +175,6 @@ player = Player()
 # Main Function
 while True:
 	
-	# handling key events
-	# If two keys pressed simultaneously
-	# we don't want player to move into two
-	# directions simultaneously
     player.move()
 
 	# displaying score countinuously
@@ -168,3 +184,12 @@ while True:
     pygame.display.update()
 
 	# Frame Per Second /Refresh Rat
+
+    
+#while True: # main game loop
+        #for event in pygame.event.get():
+            #if event.type == pygame.QUIT:
+                #pygame.quit()
+#sys.exit()
+#pygame.display.update()
+

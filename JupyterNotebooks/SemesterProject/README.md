@@ -44,4 +44,4 @@ Notes:
 
     -Notes included for each line of code in code file
 
-# Thank You For
+# Thank You For Playing Dodge Obsticle!
